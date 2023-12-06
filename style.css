@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap');
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ------ COLORS -------- */
+  /* Background colors */
+  --MAIN-ORANGE: darkorange;
+  --BUTTONS-BG-HOVER: var(--WHITE-MODE-ORANGE);
+  --BUTTONS-BG-ACTIVE: var(--DARK-MODE-ORANGE);
+
+  /* Dark mode colors */
+  --WHITE-MODE-ORANGE: rgb(255, 209, 123);
+  --DARK-MODE-ORANGE: rgb(90, 59, 0);
+
+}
+
+body {
+  font: 2rem 'Sora', sans-serif;
+  transition: color .5s, background-color .5s;
+}
+
+main {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.header-container,
+.main-container,
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1440px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+
+.title-div {
+  max-width: 1000px;
+}
+
+.generate-suika-button {
+  background-color: var(--MAIN-ORANGE);
+  color: var(--DARK-MODE-ORANGE);
+  font-weight: 700;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  margin: 1rem;
+  transition: background-color .5s, font-weight .5s;
+  cursor: pointer;
+}
+
+/* TOGGLE SWITCH CHECKBOX */
+.dark-mode-div {
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode-div p {
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+/* TOGGLE STYLES */
+.toggle-switch-div {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  margin: -2.5rem 2rem 0 -2.5rem;
+}
+
+.toggle-switch-div label {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background-color: var(--MAIN-ORANGE);
+  border-radius: 25px;
+  cursor: pointer;
+
+}
+
+.switch input {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  border-radius: 50px;
+  transition: .3s;
+}
+
+.slider::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--WHITE-MODE-ORANGE);
+  transition: transform .2s;
+}
+
+#toggle-switch:checked ~ .slider::before {
+  transform: translateX(-30px);
+  background-color: var(--DARK-MODE-ORANGE);
+}
+
+/* TOGGLE BUTTON END */
+
+audio,
+audio::-webkit-media-controls-panel {
+  background-color: var(--WHITE-MODE-ORANGE);
+  border-radius: 10px;
+}
+
+
+
+button:hover {
+  background-color: var(--BUTTONS-BG-HOVER);
+}
+
+button:active {
+  background-color: var(--BUTTONS-BG-ACTIVE);
+}
+
+span {
+  font-weight: 700;
+}
+
+a {
+  color: black;
+}
+
+.generate-img {
+  border: 20px double var(--MAIN-ORANGE);
+  width: 100%;
+}
+
+.trumpet-paragraph {
+  font-size: .8rem;
+}
+
+.footer-container p {
+  font-size: 1rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1000px) {
+  .header-container {
+    flex-direction: column;
+  }
+
+  /* TOGGLE STYLES */
+  .toggle-switch-div {
+    width: 80px;
+    margin: -2.5rem 2rem 0 -3rem;
+  }
+
+}

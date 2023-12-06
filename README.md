@@ -1,0 +1,2 @@
+This is a little project I've made as a gift for my good friend Shadow Chevy. He loves Suika Ibuki so I hope he likes it. 
+Even though it's said that this website uses AI to generate images, THAT'S FALSE.
